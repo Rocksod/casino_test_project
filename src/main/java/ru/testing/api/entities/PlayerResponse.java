@@ -1,18 +1,12 @@
-
 package ru.testing.api.entities;
 
-import java.util.List;
-import javax.annotation.Generated;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
-@Generated("net.hexar.json2pojo")
-@SuppressWarnings("unused")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PlayerResponse {
 
@@ -32,17 +26,17 @@ public class PlayerResponse {
     private Object country;
     @SerializedName("created_at")
     private String createdAt;
-    @SerializedName("currency")
+    @JsonProperty("currency")
     private String currency;
     @SerializedName("current_sign_in_at")
     private String currentSignInAt;
-    @SerializedName("date_of_birth")
+    @JsonProperty("date_of_birth")
     private String dateOfBirth;
     @SerializedName("deposit_bonus_code")
     private Object depositBonusCode;
     @SerializedName("email")
     private String email;
-    @SerializedName("first_name")
+    @JsonProperty("first_name")
     private String firstName;
     @SerializedName("gender")
     private String gender;
@@ -52,11 +46,11 @@ public class PlayerResponse {
     private Long id;
     @SerializedName("language")
     private String language;
-    @SerializedName("last_name")
+    @JsonProperty("last_name")
     private String lastName;
     @SerializedName("license_name")
     private String licenseName;
-    @SerializedName("mobile_phone")
+    @JsonProperty("mobile_phone")
     private String mobilePhone;
     @SerializedName("personal_id_number")
     private Object personalIdNumber;
@@ -301,7 +295,11 @@ public class PlayerResponse {
         assertAll("user",
                 () -> assertNotNull(getId()),
                 () -> assertEquals(getEmail().toLowerCase(), user.getEmail().toLowerCase()),
-                () -> assertEquals(getCurrency(), user.getCurrency())
+                () -> assertEquals(user.getCurrency(), getCurrency()),
+                () -> assertEquals(user.getFirstName(), getFirstName()),
+                () -> assertEquals(user.getLastName(), getLastName()),
+                () -> assertEquals(user.getDateOfBirth(), getDateOfBirth()),
+                () -> assertEquals(user.getMobilePhone(), getMobilePhone())
         );
     }
 

@@ -8,8 +8,6 @@ import ru.testing.api.entities.PlayerResponse;
 import ru.testing.api.entities.User;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class PlayerService extends ru.testing.api.services.Service {
 

@@ -13,7 +13,6 @@ import static ru.testing.api.entities.UserFactory.createUserWithCurrency;
  */
 public class SignUpPlayerApiTest {
 
-
     /**
      * Check sign up player using api and check response
      */
