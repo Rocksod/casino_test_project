@@ -1,7 +1,7 @@
 
 
 Use gradle or junit for start tests 
-Test classes in /src/test/java/ru/testing/ directory
+Test classes in /src/test/java/ru/testing/ directory web/CasinoSignUpTest.class and api/playerSignUpTest.class
 
 ## Built With
 

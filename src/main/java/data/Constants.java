@@ -15,5 +15,6 @@ public class Constants {
 
     public static final String SUCCESS_REGISTRATION_MESSAGE_TEXT = "Вам отправлено письмо";
     public static final String AGREEMENT_ELEMENT_TEXT = "Я принимаю";
+    public static final String DEPOSIT_BUTTON_TEXT = "Депозит";
 
 }

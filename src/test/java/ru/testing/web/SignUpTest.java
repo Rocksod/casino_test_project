@@ -7,10 +7,16 @@ import ru.testing.api.entities.User;
 import ru.testing.api.entities.UserFactory;
 import ru.testing.web.pages.CasinoHomePage;
 
-public class CasinoSignUpTest extends BaseTest {
+/**
+ * Tests for player sign-up Web
+ */
+public class SignUpTest extends BaseTest {
 
     protected CasinoHomePage casinoHomePage = new CasinoHomePage();
 
+    /**
+     * Check sign up player using web
+     */
     @DisplayName("Test registration of new player")
     @Test
     public void casinoSignUpTest() {
@@ -22,6 +28,9 @@ public class CasinoSignUpTest extends BaseTest {
         casinoHomePage.waitSuccessSignUpMessage();
     }
 
+    /**
+     * Check sign up player using web and autoregistration button
+     */
     @DisplayName("Another example of test registration")
     @Test
     public void autoSignUpButtonTest() {

@@ -6,9 +6,7 @@ import org.openqa.selenium.By;
 import ru.testing.api.entities.User;
 
 import static com.codeborne.selenide.Selenide.$;
-import static data.Constants.AGREEMENT_ELEMENT_TEXT;
-import static data.Constants.DEFAULT_TIMEOUT;
-import static data.Constants.SUCCESS_REGISTRATION_MESSAGE_TEXT;
+import static data.Constants.*;
 
 public class CasinoHomePage  {
     public final SelenideElement casinoSignUpButton =
@@ -20,7 +18,7 @@ public class CasinoHomePage  {
     public final SelenideElement nameField = $(By.xpath(".//input[@placeholder='Имя']"));
     public final SelenideElement surnameField = $(By.xpath(".//input[@placeholder='Фамилия']"));
     public final SelenideElement telephoneField =
-            $(By.xpath(".//input[@type='tel' and @placeholder='+ (код страны) (номер)']"));
+            $(By.xpath(".//input[@type='tel']"));
     public final SelenideElement maleGenderRadio = $(By.id("m"));
     public final SelenideElement femaleGenderRadio = $(By.id("f"));
     public final SelenideElement ddBirthdayField = $(By.xpath(".//input[contains(@class,'birthday-dd')]"));
@@ -36,7 +34,7 @@ public class CasinoHomePage  {
     public final SelenideElement autoregistrationButton =
             $(By.xpath("//button[contains(@translate,'frontend.links.autoregister')]"));
     public final SelenideElement depositButton =
-            $(By.xpath("//button[@class='btn btn_lg btn-success ng-binding'][text()='Депозит']"));
+            $(By.xpath("//button[@class='btn btn_lg btn-success ng-binding'][text()='" + DEPOSIT_BUTTON_TEXT + "']"));
     public final SelenideElement username = $(By.xpath("//div[@class='user__name ng-binding']"));
 
     public void clickHomePageSignUpButton() {
