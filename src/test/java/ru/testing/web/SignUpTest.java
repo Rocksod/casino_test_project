@@ -31,7 +31,7 @@ public class SignUpTest extends BaseTest {
     /**
      * Check sign up player using web and autoregistration button
      */
-    @DisplayName("Another example of test registration")
+    @DisplayName("Test registration using autoregistration button")
     @Test
     public void autoSignUpButtonTest() {
         casinoHomePage.clickHomePageSignUpButton();

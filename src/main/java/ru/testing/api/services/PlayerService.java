@@ -26,7 +26,7 @@ public class PlayerService extends ru.testing.api.services.Service {
                 .post(ENDPOINT_PLAYER_URL)
                 .then()
                 .assertThat()
-                .statusCode(Matchers.anyOf(Matchers.is(200), Matchers.is(201)))
+                .statusCode(201)
                 .body(Matchers.notNullValue())
                 .extract().response();
 

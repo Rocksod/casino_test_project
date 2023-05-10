@@ -17,7 +17,7 @@ public class SignUpPlayerApiTest {
      * Check sign up player using api and check response
      */
     @Test
-    @DisplayName("Api sign up")
+    @DisplayName("Api sign up test")
     public void playerSignUpApiTest() {
         User user = createUserWithCurrency("EUR");
         PlayerService playerService = new PlayerService();
