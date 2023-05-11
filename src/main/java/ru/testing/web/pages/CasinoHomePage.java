@@ -2,6 +2,7 @@ package ru.testing.web.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import ru.testing.api.entities.User;
 
@@ -99,9 +100,11 @@ public class CasinoHomePage  {
     }
 
     public void assertUserLogin() {
-        casinoSignUpButton.should(Condition.not(Condition.visible));
-        username.should(Condition.visible);
-        depositButton.should(Condition.visible);
+        Assertions.assertAll(
+                () -> casinoSignUpButton.should(Condition.not(Condition.visible)),
+                () -> username.should(Condition.visible),
+                () -> depositButton.should(Condition.visible)
+        );
     }
 
     public void fillInSignUpForm(User user) {
