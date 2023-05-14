@@ -1,6 +1,7 @@
 package ru.testing.web;
 
 import controllers.BaseTest;
+import data.Currency;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.testing.api.entities.User;
@@ -20,7 +21,7 @@ public class SignUpTest extends BaseTest {
     @DisplayName("Test registration of new player")
     @Test
     public void casinoSignUpTest() {
-        User user = UserFactory.createUserWithCurrency("EUR");
+        User user = UserFactory.createUserWithCurrency(Currency.EUR.name());
 
         casinoHomePage.clickHomePageSignUpButton();
         casinoHomePage.fillInSignUpForm(user);
