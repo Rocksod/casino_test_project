@@ -1,5 +1,6 @@
 package ru.testing.api;
 
+import data.Currency;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.testing.api.entities.PlayerResponse;
@@ -19,7 +20,7 @@ public class SignUpPlayerApiTest {
     @Test
     @DisplayName("Api sign up test")
     public void playerSignUpApiTest() {
-        User user = createUserWithCurrency("EUR");
+        User user = createUserWithCurrency(Currency.EUR.name());
         PlayerService playerService = new PlayerService();
 
         PlayerResponse playerResponse = playerService.signUpPlayer(user);
