@@ -3,12 +3,16 @@ package ru.testing.api.entities;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PlayerResponse {
+    private static final Logger logger = LogManager.getLogger(PlayerResponse.class);
 
     @SerializedName("auth_fields_missed")
     private List<Object> authFieldsMissed;
@@ -301,6 +305,7 @@ public class PlayerResponse {
                 () -> assertEquals(user.getDateOfBirth(), getDateOfBirth()),
                 () -> assertEquals(user.getMobilePhone(), getMobilePhone())
         );
+        logger.info("Player signed up successfully! Email: {}; Id = {}", user.getEmail(), getId());
     }
 
 }

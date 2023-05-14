@@ -3,6 +3,7 @@
 Use gradle or junit for start tests 
 Test classes in /src/test/java/ru/testing/ directory web/SignUpTest.class and api/SignUpPlayerApiTest.class
 
+Need logs/test.log file for writing logs.
 ## Built With
 
 jdk8
