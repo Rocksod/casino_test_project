@@ -5,9 +5,6 @@ buildscript {
         webDriverManagerVersion = '3.6.2'
         restAssuredVersion = '4.0.0'
     }
-    repositories {
-        google()
-    }
 }
 
 plugins {
